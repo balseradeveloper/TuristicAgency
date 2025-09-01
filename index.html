@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Turística Noruega</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <video class="hero-video" autoplay muted loop>
+        <source src="videos/fiordo.mp4" type="video/mp4">
+    </video>
+    <!-- Hero / Portada -->
+    <header class="hero">
+
+        <div class="hero-overlay">
+
+            <div class="title-container">
+                <h1 class="hero-subtitle logo-nordic">NordicDreams</h1>
+
+                <img src="./images/noruegaFlag.png" alt="banderaNoruega" id="banderaNoruega">
+                <h2 class="hero-title">Descubre Noruega como nunca antes</h2>
+                <style>
+
+                </style>
+            </div>
+
+            <nav class="hero-menu">
+                <input type="checkbox" id="menu">
+                <label for="menu" id="burguer-menu"> ☰ </label>
+                <ul>
+                    <div id="menu-container">
+                        <li><a href="#destinos">Destinos</a></li>
+                        <li><a href="#experiencias">Experiencias</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </div>
+
+                </ul>
+            </nav>
+
+        </div>
+        </div>
+    </header>
+
+    <!-- Destinos Destacados -->
+    <section id="destinos" class="destinos">
+        <h2 class="section-title">Viaja ahora</h2>
+        <div class="destinos-grid">
+            <div class="destino-card">
+                <video class="destino-video" autoplay muted loop>
+                    <source src="videos/fiordo1.mp4" type="video/mp4">
+                </video>
+                <h3 class="destino-title">Fiordos del Norte</h3>
+                <p class="destino-desc">
+                    Explora los fiordos más impresionantes de Noruega. Navega entre acantilados majestuosos, disfruta de
+                    rutas de senderismo panorámicas y descubre pueblos pintorescos a orillas del agua. Vive la
+                    tranquilidad de la naturaleza noruega y sorpréndete con cascadas, fauna local y paisajes que parecen
+                    sacados de un cuento.
+                </p>
+                </p>
+
+                <button class="btn-sbm">Saber más</button>
+            </div>
+            <div class="destino-card">
+                <video class="destino-video" autoplay muted loop>
+                    <source src="videos/aurora.mp4" type="video/mp4">
+                </video>
+                <h3 class="destino-title">Auroras Boreales</h3>
+                <p class="destino-desc">
+                    Vive la magia de las luces del norte en su máximo esplendor. Observa cómo el cielo se ilumina con
+                    colores vibrantes y formas cambiantes, disfruta de excursiones nocturnas guiadas y aprende sobre la
+                    ciencia y las leyendas detrás de las auroras boreales.
+                </p>
+                </p>
+                <button class="btn-sbm">Saber más</button>
+
+            </div>
+            <div class="destino-card">
+                <video class="destino-video" autoplay muted loop>
+                    <source src="videos/glaciar.mp4" type="video/mp4">
+                </video>
+                <h3 class="destino-title">Glaciares y Montañas</h3>
+                <p class="destino-desc">
+                    Aventuras entre hielo y roca para los más valientes. Explora glaciares milenarios, realiza trekking
+                    por senderos escarpados y contempla vistas panorámicas desde las cumbres noruegas. Descubre lagos
+                    cristalinos, practica escalada y vive la emoción de recorrer paisajes de montaña únicos en Europa.
+                    Ideal para amantes de la naturaleza y la aventura.
+                </p>
+                </p>
+                <button class="btn-sbm">Saber más</button>
+
+            </div>
+
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+
+
+    <!-- Experiencias -->
+
+    <section id="experiencias" class="experiencias">
+        <h2 class="section-title">Experiencias Únicas</h2>
+        <h3 id="description">Sumérgete en la cultura noruega y vive experiencias
+            auténticas que te conectarán con sus tradiciones,
+            gastronomía, naturaleza y hospitalidad. Descubre la esencia de Noruega participando en actividades locales,
+            explorando paisajes únicos y compartiendo momentos inolvidables con su gente.</h3>
+        <div class="experiencias-grid">
+            <div class="experiencia-card"
+                style="background-image: url('./images/fiordoNoruegoFoto.jpg'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Senderismo en Fiordos</h3>
+                    <p class="experiencia-desc">Recorre senderos espectaculares entre montañas y cascadas, rodeado de
+                        naturaleza virgen.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div>
+            <div class="experiencia-card"
+                style="background-image: url('./images/cruceroNordico.jpg'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Crucero Escénico</h3>
+                    <p class="experiencia-desc">Navega por los fiordos noruegos y disfruta de vistas panorámicas únicas
+                        desde el agua.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div> 
+            <div class="experiencia-card"
+                style="background-image: url('./images/safariNorway.jpg'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Safari Fotográfico</h3>
+                    <p class="experiencia-desc">Captura la belleza de la fauna y los paisajes noruegos con la ayuda de
+                        guías expertos.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div>
+            <div class="experiencia-card"
+                style="background-image: url('./images/borealAurora.jpg'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Caza de Auroras Boreales</h3>
+                    <p class="experiencia-desc">Vive la emoción de buscar y admirar las mágicas luces del norte en
+                        cielos despejados.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div>
+            <div class="experiencia-card"
+                style="background-image: url('./images/pescaNoruega.jpg'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Pesca en Hielo</h3>
+                    <p class="experiencia-desc">Experimenta la tradición noruega de pescar en lagos congelados rodeado
+                        de paisajes invernales.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div>
+            <div class="experiencia-card"
+                style="background-image: url('./images/museumViking.webp'); background-size: cover; background-position: center; position:relative;">
+                <div class="experiencia-info">
+                    <h3 class="experiencia-title">Ruta Cultural Vikinga</h3>
+                    <p class="experiencia-desc">Descubre la historia y los secretos de los vikingos en museos y sitios
+                        históricos.</p>
+                    <a href="#contacto" class="btn-vif" style="bottom:15px; right:15px;">Vivir experiencia</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots-experience">
+            <span class="dot-experience active" id="dot1"></span>
+            <span class="dot-experience" id="dot2"></span>
+            <span class="dot-experience" id="dot3"></span>
+            <span class="dot-experience" id="dot4"></span>
+            <span class="dot-experience" id="dot5"></span>
+            <span class="dot-experience" id="dot6"></span>
+
+        </div>
+    </section>
+    </section>
+
+    <script src="./js/scrollAction.js"></script>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios">
+        <h2 class="section-title">Lo que dicen nuestros viajeros
+        </h2>
+        <div class="testimonios-grid">
+            <div class="testimonio-card">
+                <div class="testimonio-avatar-container">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Avatar Laura M."
+                        class="testimonio-avatar">
+                </div>
+                <p class="testimonio-text">“Una experiencia inolvidable, Noruega es mágica!”</p>
+                <span class="testimonio-author">- Laura M.</span>
+            </div>
+            <div class="testimonio-card">
+                <div class="testimonio-avatar-container">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar Pedro R."
+                        class="testimonio-avatar">
+                </div>
+                <p class="testimonio-text">“El tour de los fiordos superó todas mis expectativas.”</p>
+                <span class="testimonio-author">- Pedro R.</span>
+            </div>
+            <div class="testimonio-card">
+                <div class="testimonio-avatar-container">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar Ana S."
+                        class="testimonio-avatar">
+                </div>
+                <p class="testimonio-text">“Ver la aurora boreal fue un sueño hecho realidad.”</p>
+                <span class="testimonio-author">- Ana S.</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Gastronomía Noruega -->
+    <div id="extras">
+        <section id="gastronomia" class="gastronomia">
+            <h2 class="section-title">Gastronomía Noruega</h2>
+            <div class="gastronomia-content">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                    alt="Plato típico noruego" class="gastronomia-img">
+                <p class="gastronomia-desc">Descubre los sabores únicos de Noruega: salmón ahumado, bacalao, cordero y
+                    dulces tradicionales como el Krumkake. La cocina noruega combina ingredientes frescos y recetas
+                    ancestrales.</p>
+            </div>
+        </section>
+
+        <!-- Fiestas Noruegas -->
+        <section id="fiestas" class="fiestas">
+            <h2 class="section-title">Fiestas Noruegas</h2>
+            <div class="fiestas-content">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+                    alt="Fiesta noruega" class="fiestas-img">
+                <p class="fiestas-desc">Vive la alegría de las celebraciones noruegas: el Día Nacional (17 de mayo),
+                    festivales de invierno y fiestas de la aurora boreal. Tradición, música y cultura en cada rincón.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mejores webs de hoteles en Noruega -->
+        <section id="hoteles" class="hoteles">
+            <h2 class="section-title">Hoteles en Noruega</h2>
+            <div class="hoteles-content">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+                    alt="Hotel en Noruega" class="hoteles-img">
+                <ul class="hoteles-list">
+                    <li><a href="https://www.booking.com/country/no.es.html" target="_blank">Booking Noruega</a></li>
+                    <li><a href="https://www.nordicchoicehotels.no/" target="_blank">Nordic Choice Hotels</a></li>
+                    <li><a href="https://www.visitnorway.es/planifica-tu-viaje/alojamiento/"
+                            target="_blank">VisitNorway</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contacto / Reserva -->
+    <section id="contacto" class="contacto">
+        <h2 class="section-title">Reserva tu aventura</h2>
+        <article class="form-article">
+            <form class="contacto-form">
+                <input type="text" class="form-input" placeholder="Nombre completo">
+                <input type="email" class="form-input" placeholder="Correo electrónico">
+                <input type="tel" class="form-input" placeholder="Teléfono">
+                <input type="date" class="form-input" placeholder="Fecha de viaje">
+                <select class="form-select tour-select">
+                    <option value="">Selecciona tu tour</option>
+                    <option value="fiordos">Fiordos del Norte</option>
+                    <option value="aurora">Auroras Boreales</option>
+                    <option value="glaciares">Glaciares y Montañas</option>
+                    <option value="vikingos">Ruta Vikinga</option>
+                    <option value="pesca">Pesca en Hielo</option>
+                </select>
+                <textarea class="form-textarea"
+                    placeholder="¿Qué esperas de tu viaje? Cuéntanos tus intereses o necesidades especiales"></textarea>
+
+                <button type="submit" class="btn-cta">Enviar</button>
+
+            </form>
+
+            <article id="source-info">
+                <source>
+                <img src="./images/imagenFormulario.jpg" alt="Imagen formulario" id="form-image">
+
+                </source>
+
+                <div class="social-icons" style="margin-top: 16px; display: flex; gap: 16px;">
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" class="social-media">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="social-media"> 
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" title="Twitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" class="social-media"> 
+                    </a>
+                </div>
+            </article>
+        </article>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="./images/noruegaFlag.png" alt="Bandera Noruega" id="footerBanderaNoruega"
+            style="height:32px; vertical-align:middle; margin-right:8px;">
+
+        <div class="footer-content">
+            <p>&copy; 2025 Agencia Turística Noruega. Todos los derechos reservados.</p>
+            <nav class="footer-nav">
+                <a href="#destinos">Destinos</a> |
+                <a href="#experiencias">Experiencias</a> |
+                <a href="#testimonios">Testimonios</a> |
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div>
+                <p class="footer-contact">
+                    <a href="mailto:info@nordicdreams.com"
+                        style="margin-left: 10px; text-decoration: none; color: #00205B;">info@nordicdreams.com</a>
+                </p>
+                <p class="footer-contact">
+                    <a href="tel:+47123456789" style="margin-left: 10px; text-decoration: none;  color: #00205B; ">+47
+                        123 456 789</a>
+                </p>
+                </p>
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="./js/animacionExperiencias.js"></script>
+    <script src="./js/animacionExtras.js"></script>
+</body>
+
+</html>

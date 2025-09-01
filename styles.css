@@ -1,0 +1,1370 @@
+:root {
+    --font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(128, 128, 128, 0.5), rgba(255, 255, 255, 0.7), rgba(128, 128, 128, 0.5));
+    z-index: 2;
+    padding: 10px;
+    padding-bottom: 20px;
+    ;
+}
+
+
+.logo-nordic {
+    font-size: 2.3rem;
+    color: #00205B;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 14px 36px;
+    display: inline-block;
+    box-shadow: 0 6px 24px rgba(0, 44, 89, 0.18);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+    position: relative;
+    transition: background 0.3s;
+}
+
+.logo-nordic::before {
+    content: "✦";
+    font-size: 2.1rem;
+    color: #00205B;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.hero-title {
+    text-align: center;
+    box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.3), 0 1.5px 8px 0 rgba(234, 26, 26, 0.2);
+    color: #00205B;
+}
+
+.btn-cta {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #00205B;
+    background-color: #BA0C2F;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+.hero-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banderaNoruega {
+    width: 120px;
+    height: 70px;
+}
+
+
+
+
+.section-title {
+    color: #00205B;
+
+}
+
+/* Menú */
+
+
+ul.hoteles-list {
+    display: block !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* El menú principal sigue oculto por defecto, pero solo si no es la lista de hoteles */
+ul:not(.hoteles-list) {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 30px;
+    text-align: center;
+    width: 100%;
+}
+
+
+input:checked~ul {
+    display: block;
+    animation: menuFadeIn 0.4s ease;
+}
+
+
+input:checked~#burguer-menu {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00205B;
+    color: white;
+    width: 15%;
+
+
+}
+
+input {
+    display: none;
+}
+
+#burguer-menu {
+    color: #00205B;
+    font-size: 30px;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+li>a {
+    text-decoration: none;
+    color: #00205B;
+    font-weight: bold;
+
+}
+
+
+/*Destinos*/
+
+.destinos {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: white;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.destinos>.section-title {
+    font-size: 40px;
+}
+
+
+
+
+.destino-desc {
+    width: 100%;
+    text-align: center;
+    max-width: 320px;
+
+}
+
+
+
+.img {
+    max-height: 250px;
+    object-fit: cover
+}
+
+.destinos-grid {
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    /* importante: faltaba la dirección x */
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 10px 10px;
+    margin-left: 20px;
+}
+
+.destino-card {
+    flex: 0 0 90%;
+    font-weight: normal;
+    scroll-snap-align: start;
+    /*Cuando el scroll se ajuste, la tarjeta debe alinearse al inicio*/
+    border-radius: 1rem;
+    overflow: hidden;
+    /*Lo que sobre salga de la imagen, si es mas grande que la tarjeta se corta*/
+    padding: 10px 10px 10px 10px;
+}
+
+.destino-video {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #00205B;
+}
+
+.btn-sbm {
+    text-decoration: none;
+    color: #00205B;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer
+}
+
+
+
+.btn-sbm:hover {
+    color: rgb(238, 238, 238);
+    transform: scale(1.05);
+    background-color: #00205B;
+
+
+}
+
+
+/*Experiencias*/
+
+.experiencias {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 10px;
+    background: linear-gradient(135deg, rgba(27, 24, 226, 0.5), rgba(90, 145, 228, 0.911), rgba(128, 128, 128, 0.5));
+    padding: 1;
+    padding-bottom: 20px;
+    ;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.experiencias>.section-title {
+    font-size: 40px;
+    color: white;
+}
+
+.experiencias>#description {
+    font-weight: normal;
+    color: white;
+}
+
+.experiencias-grid {
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    /* importante: faltaba la dirección x */
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 10px 10px;
+    margin-left: 20px;
+}
+
+
+
+.experiencia-card {
+    flex: 0 0 90%;
+    font-weight: normal;
+    scroll-snap-align: start;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 6px 24px rgba(0, 44, 89, 0.18), 0 1.5px 8px 0 rgba(234, 26, 26, 0.08);
+    background: linear-gradient(135deg, #fff 70%, #8a9ad6 100%);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 32dvh;
+}
+
+.experiencia-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 44, 89, 0.28), 0 3px 16px 0 rgba(234, 26, 26, 0.12);
+}
+
+.experiencia-info {
+    background: linear-gradient(135deg, rgba(43, 72, 233, 0.25), rgba(38, 90, 185, 0.12), rgba(110, 96, 96, 0.85));
+    padding: 18px 16px 14px 16px;
+    color: #00205B;
+    font-size: 1.08rem;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(10, 44, 107, 0.10);
+    box-shadow: 0 2px 8px rgba(10, 44, 107, 0.08);
+    color: white;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.btn-vif {
+    text-decoration: none;
+    color: #00205B;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer
+}
+
+.btn-vif:hover {
+    color: rgb(238, 238, 238);
+    transform: scale(1.05);
+    background-color: #00205B;
+
+
+}
+
+.dot-experience {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot-experience.active {
+    background: #ffffff;
+}
+
+.slider-dots-experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 0.5rem;
+    min-height: 32px;
+}
+
+/*Testimonios*/
+
+.testimonios {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    background: #fff;
+    padding-bottom: 20px;
+    padding: 10px 10px 40px 10px;
+}
+
+.testimonios>.section-title {
+    font-size: 40px;
+    color: #00205B;
+}
+
+.testimonios-grid {
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 10px 10px;
+    margin-left: 20px;
+}
+
+.testimonios::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonio-card {
+    background: linear-gradient(135deg, #fff 70%, #8a9ad6 100%);
+    flex: 0 0 90%;
+    font-weight: normal;
+    scroll-snap-align: start;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 44, 89, 0.18), 0 1.5px 8px 0 rgba(234, 26, 26, 0.08);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 44, 89, 0.28), 0 3px 16px 0 rgba(234, 26, 26, 0.12);
+}
+
+.testimonio-avatar {
+    border-radius: 100px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+
+    margin-top: 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(10, 44, 107, 0.10);
+}
+
+.testimonio-text {
+    background: linear-gradient(135deg, rgba(43, 72, 233, 0.08), rgba(38, 90, 185, 0.04), rgba(110, 96, 96, 0.05));
+    padding: 18px 16px 14px 16px;
+    color: #00205B;
+    font-size: 1.08rem;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(10, 44, 107, 0.10);
+    box-shadow: 0 2px 8px rgba(10, 44, 107, 0.08);
+    line-height: 1.8;
+    border-radius: 0 0 1.2rem 1.2rem;
+    font-style: italic;
+    width: 80%;
+}
+
+.testimonio-author {
+    font-weight: bold;
+    color: #BA0C2F;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+.slider-dots-testimonios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 0.5rem;
+    min-height: 32px;
+}
+
+.dot-testimonio {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot-testimonio.active {
+    background: #00205B;
+}
+
+/* Contacto */
+
+.contacto {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    background: linear-gradient(135deg, rgba(27, 24, 226, 0.5), rgba(90, 145, 228, 0.911), rgba(128, 128, 128, 0.5));
+    padding-bottom: 20px;
+}
+
+.contacto>.section-title {
+    font-size: 40px;
+    color: white;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    gap: 20px;
+
+}
+
+.form-input {
+    font-size: 12px;
+    padding: 16px 22px;
+    background: #fff;
+    color: #00205B;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(10, 44, 107, 0.10);
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    display: block;
+}
+
+.form-input:focus {
+    border-color: #00205B;
+    box-shadow: 0 4px 16px rgba(10, 44, 107, 0.18);
+    outline: none;
+}
+
+.tour-select {
+    font-size: 20px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #fff 80%, #BA0C2F 100%);
+    color: #00205B;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(10, 44, 107, 0.08);
+    transition: border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.tour-select:focus {
+    border-color: #00205B;
+    box-shadow: 0 4px 16px rgba(10, 44, 107, 0.18);
+    outline: none;
+}
+
+.form-select {
+    font-size: 20px;
+    padding: 12px 18px;
+    background: #fff;
+    /* Changed for better contrast */
+    color: #00205B;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(10, 44, 107, 0.08);
+    transition: border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%2300205B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 18px 18px;
+    cursor: pointer;
+}
+
+.form-textarea {
+    height: 50vw;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid #00205B;
+}
+
+.btn-cta {
+    text-decoration: none;
+    color: #00205B;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer
+}
+
+.btn-cta:hover {
+    color: rgb(238, 238, 238);
+    transform: scale(1.05);
+    background-color: #00205B;
+
+
+}
+
+
+/**Hoteles*/
+
+.hoteles-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+
+}
+
+.hoteles-list {
+    width: 100%;
+    background: none;
+    padding: 0 0 0 0;
+    margin: 0;
+    margin-top: 10px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hoteles-list li {
+    margin-bottom: 10px;
+    text-align: left;
+    background: none;
+    color: #003d6b;
+    font-size: 1rem;
+
+}
+
+.hoteles-list a {
+    color: #BA0C2F !important;
+    background: none;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    word-break: break-all;
+    display: inline-block;
+    padding: 2px 0;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+
+
+.hoteles {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px 10px 18px 10px;
+    border-radius: 20px;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.10);
+    background-color: white;
+
+}
+
+.hoteles-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hoteles-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(10, 44, 107, 0.10);
+}
+
+.hoteles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.hoteles-list li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hoteles-list a {
+    color: #BA0C2F;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    word-break: break-all;
+}
+
+
+
+/* Gastronomía Noruega */
+
+
+.gastronomia {
+    position: relative;
+    background-color: white;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px 10px 18px 10px;
+    border-radius: 20px;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.10);
+}
+
+.gastronomia-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gastronomia-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(10, 44, 107, 0.10);
+}
+
+.gastronomia-desc {
+    color: #00205B;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fiestas Noruegas */
+
+
+.fiestas {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px 10px 18px 10px;
+    border-radius: 20px;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.10);
+    background-color: white;
+
+}
+
+
+.fiestas-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00205b;
+}
+
+.fiestas-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(10, 44, 107, 0.10);
+}
+
+.fiestas-desc {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*Footer*/
+
+
+.footer {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 20px;
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 0.5), rgba(255, 255, 255, 0.7), rgba(10, 44, 107, 0.5));
+    border: none;
+    box-shadow: none;
+    color: #00205B !important;
+
+}
+
+.footer-content {
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-nav>a {
+    text-decoration: none;
+    color: #00205B;
+
+}
+
+#form-image{
+    display: none;
+}
+
+#source-info{
+    display: none;
+}
+
+/* Aquí puedes agregar media queries para tablet y desktop después */
+
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .hero,
+    .destinos,
+    .experiencias,
+    .testimonios,
+    .contacto,
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .destinos-grid,
+    .experiencias-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .destino-card,
+    .experiencia-card {
+        max-width: 45vw;
+        min-width: 280px;
+    }
+
+    .experiencia-card {
+        height: 40vw;
+    }
+
+    .testimonio-card {
+        margin: 20px auto;
+        max-width: 60vw;
+    }
+
+    .contacto-form {
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+
+    .slider-dots-experience{
+        display: none;
+    }
+
+    .slider-dots
+    {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+
+    .hero,
+    .destinos,
+    .experiencias,
+    .testimonios,
+    .contacto,
+    .footer {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+
+    #burguer-menu {
+        display: none !important;
+    }
+
+
+    #menu-container {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    #menu-container>li>a:hover {
+        background-color: #00205B;
+        color: white !important;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .hero-title {
+        box-shadow: none;
+    }
+
+    /*Destinos*/
+
+    .destinos {
+        animation: fadeRightSlider 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+
+
+
+    .destinos-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: unset;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+
+    .destino-card {
+        flex: 0 0 28vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .destino-desc {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-sbm {
+        margin-top: 0;
+    }
+
+
+    .slider-dots {
+        display: none;
+
+    }
+
+    .dot {
+        display: none;
+    }
+
+
+    /*Experiencias*/
+
+    .experiencias {
+        /* Quita la animación por defecto */
+        animation: none;
+        opacity: 0;
+        transition: opacity 0.6s;
+    }
+
+    /* Cuando el scroll llega a .experiencias, agrega la clase .show para activar la animación */
+    .experiencias.show {
+        animation: fadeLeftSlider 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        opacity: 1;
+    }
+
+
+    .experiencias-grid {
+        overflow-x: auto;
+        overflow-y: hidden;
+        cursor: grab;
+        gap: 20px;
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .experiencias-grid.dragging {
+        cursor: grabbing;
+    }
+
+    .experiencias-grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+
+    .experiencia-card {
+        min-width: 340px;
+        max-width: 420px;
+        margin: 20px 0;
+        font-size: 1.18rem;
+        padding: 0;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 7.5;
+    }
+
+    .experiencia-card:hover {
+        background: linear-gradient(135deg, rgba(0, 32, 91, 0.08), rgba(0, 32, 91, 0.04), rgba(255, 255, 255, 0.1));
+        z-index: 4;
+        opacity: 0.85;
+    }
+
+    .experiencia-info {
+
+        background: none;
+        font-size: 1.08rem;
+        padding: 22px 18px 18px 18px;
+    }
+
+    .btn-vif {
+        text-decoration: none;
+        color: #00205B;
+        margin-top: 14px;
+        border-radius: 1rem;
+        padding: 10px 24px;
+        font-size: 1.08rem;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        max-width: 180px;
+        width: auto;
+        line-height: 1.2;
+        background: white;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-vif:hover {
+        background: #00205B;
+        color: #fff;
+    }
+
+    #dot4,
+    #dot5,
+    #dot6 {
+        display: none;
+    }
+
+    /*Testimonios*/
+
+
+    .testimonios {
+        position: relative;
+        padding: 30px 30px 30px 30px;
+        /* Elimina opacity aquí */
+        /* background-image, etc. se mueven al ::before */
+    }
+
+    .testimonios::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./images/fondoTestimonios.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.52;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .testimonios>* {
+        position: relative;
+        z-index: 1;
+    }
+
+    .testimonios-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: unset;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+    .testimonio-card {
+        flex: 0 0 28vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+
+    #extras {
+        background: linear-gradient(135deg, rgba(27, 24, 226, 0.5), rgba(90, 145, 228, 0.911), rgba(128, 128, 128, 0.5)) !important;
+        display: flex;
+        flex-direction: row;
+        overflow-x: unset;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: nowrap;
+        min-height: 260px;
+        align-items: stretch;
+        position: relative;
+        z-index: 1;
+        padding: 30px 0;
+    }
+
+    #extras>* {
+        box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.10) !important;
+        margin: 0;
+        border-radius: 20px;
+        flex: 1 1 0;
+        min-width: 320px;
+        max-width: 400px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .gastronomia,
+    .fiestas,
+    .hoteles {
+
+        display: none;
+
+    }
+
+    .gastronomia.show,
+    .fiestas.show,
+    .hoteles.show {
+        max-width: 420px;
+        width: 28vw;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px 0 rgba(0, 32, 91, 0.16), 0 2px 12px 0 rgba(186, 12, 47, 0.08);
+        padding: 28px 24px 28px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #fff 80%, #e3eafc 100%);
+        border: 1.5px solid #e0e6f6;
+        animation: fadeLeftSlider 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        opacity: 1;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .hoteles-content {
+        margin-top: 20px;
+    }
+
+
+    .hoteles-list>li>a:hover {
+        color: #00205B !important;
+        text-decoration: underline;
+    }
+
+    .gastronomia.show:hover,
+    .fiestas.show:hover,
+    .hoteles.show:hover {
+        box-shadow: 0 16px 48px 0 rgba(0, 32, 91, 0.22), 0 4px 24px 0 rgba(186, 12, 47, 0.12);
+        transform: translateY(-8px) scale(1.03);
+        background: linear-gradient(135deg, #f8fbff 70%, #dbe6fa 100%);
+    }
+
+    .gastronomia-img,
+    .fiestas-img,
+    .hoteles-img {
+        max-width: 340px;
+        border-radius: 16px;
+        margin-bottom: 18px;
+        box-shadow: 0 4px 16px rgba(10, 44, 107, 0.12);
+        border: 2px solid #e0e6f6;
+    }
+
+    .gastronomia-desc,
+    .fiestas-desc,
+    .hoteles-list {
+        color: #00205B;
+        font-size: 1.15rem;
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 1.7;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+        background: linear-gradient(90deg, #f7faff 80%, #e3eafc 100%);
+        border-radius: 12px;
+        padding: 12px 16px;
+        box-shadow: 0 2px 8px rgba(10, 44, 107, 0.06);
+    }
+
+
+
+    .contacto {
+        background: none !important;
+        background-color: white !important;
+        opacity: 0.85;
+    }
+
+    .contacto>.section-title {
+        color: #00205B;
+    }
+
+
+    .form-article{
+        display: flex;
+    }
+
+
+    
+
+    .contacto-form {
+        max-width: 32vw;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px;
+        box-shadow: 0 4px 20px 0 rgba(10, 44, 107, 0.10);
+        background: transparent;
+        gap: 24px;
+    }
+
+    #source-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-image{
+        display: block;
+        width: 800px;
+        height: 500px;
+        margin-top: 10dvh;
+        border-radius: 1.4rem;
+    }
+
+    .form-textarea {
+        height: 200px;
+    }
+
+
+    .social-icons{
+        position: relative;
+        justify-content: center;
+        margin-top: 100px;
+        display: flex;
+    }
+    .social-media {
+        width: 40px;
+        filter: invert(18%) sepia(98%) saturate(747%) hue-rotate(197deg) brightness(90%) contrast(90%);
+        transition: filter 0.2s;
+        margin: 20px 20px 20px 20px;
+    }
+    .social-media:hover {
+        filter: invert(17%) sepia(98%) saturate(747%) hue-rotate(340deg) brightness(90%) contrast(150%);
+    }
+
+    /**Footer */
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+        gap: 40px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .footer-nav>a {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #00205B;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .footer-nav>a:hover {
+        color: #BA0C2F;
+        text-decoration: underline;
+    }
+
+
+}
+
+
+
+/*Animaciones*/
+
+
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeftSlider {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes fadeRightSlider {
+    from {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
